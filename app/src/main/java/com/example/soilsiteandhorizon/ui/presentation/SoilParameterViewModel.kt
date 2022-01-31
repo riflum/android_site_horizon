@@ -89,6 +89,8 @@ class SoilParameterViewModel @Inject constructor(
 //        }
 //    }
 
+    /* SOIL Munsell Color*/
+    val soilMunsellItems = soilParameterRepository.getSoilMunsell()
 
 
 }

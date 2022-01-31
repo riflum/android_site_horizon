@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "munsell_color")
-data class SoilMunselEntity(
+data class SoilMunsellEntity(
     @PrimaryKey val id:Int,
     @ColumnInfo(name = "soil_color_hue")
     val soilColorHue:String,

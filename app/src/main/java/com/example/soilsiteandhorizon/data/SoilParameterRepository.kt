@@ -1,6 +1,7 @@
 package com.example.soilsiteandhorizon.data
 
 import com.example.soilsiteandhorizon.data.detail.SoilCodeEntity
+import com.example.soilsiteandhorizon.data.munsell.SoilMunsellEntity
 import kotlinx.coroutines.flow.Flow
 
 interface SoilParameterRepository {
@@ -18,4 +19,7 @@ interface SoilParameterRepository {
     suspend fun getCodeById(id:Int):SoilCodeEntity
 
     suspend fun getSoilCodeQuery(soilId: String, word:String):List<SoilCodeEntity>
+
+    /* SOIL MUNSEELL COLOR*/
+    fun getSoilMunsell():Flow<List<SoilMunsellEntity>>
 }

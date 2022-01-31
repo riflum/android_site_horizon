@@ -1,11 +1,12 @@
 package com.example.soilsiteandhorizon.data
 
 import com.example.soilsiteandhorizon.data.detail.SoilCodeEntity
+import com.example.soilsiteandhorizon.data.munsell.SoilMunsellEntity
 import kotlinx.coroutines.flow.Flow
 
 class SoilParameterRepositoryImpl(
-    private val soilParameterDao: SoilParameterDao
-):SoilParameterRepository {
+    private val soilParameterDao: SoilParameterDao,
+) : SoilParameterRepository {
 
     override fun getSoilParameters(): Flow<List<SoilParameterEntity>> {
         return soilParameterDao.getSoilParameter()
@@ -33,5 +34,10 @@ class SoilParameterRepositoryImpl(
 
     override suspend fun getSoilCodeQuery(soilId: String, word: String): List<SoilCodeEntity> {
         return soilParameterDao.getSoilCodeQuery(soilId, word)
+    }
+
+    /* SOIL MUNSELL*/
+    override fun getSoilMunsell(): Flow<List<SoilMunsellEntity>> {
+        return soilParameterDao.getMunsellColor()
     }
 }

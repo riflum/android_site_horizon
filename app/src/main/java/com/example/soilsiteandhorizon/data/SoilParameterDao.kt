@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.soilsiteandhorizon.data.detail.SoilCodeEntity
+import com.example.soilsiteandhorizon.data.munsell.SoilMunsellEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -36,4 +37,8 @@ interface SoilParameterDao {
 
     @Query("SELECT * FROM soil_code WHERE soil_parameter_id =:soilId AND (code LIKE '%' || :word || '%' OR text_indonesia LIKE '%' || :word || '%')")
     suspend fun getSoilCodeQuery(soilId: String, word:String):List<SoilCodeEntity>
+
+    /* SOIL MUNSELL COLOR*/
+    @Query("SELECT * FROM munsell_color")
+    fun getMunsellColor():Flow<List<SoilMunsellEntity>>
 }
