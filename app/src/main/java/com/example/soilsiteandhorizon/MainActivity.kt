@@ -29,10 +29,10 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
 //                    ModalDrawerExample()
-//                    DestinationsNavHost(navGraph = NavGraphs.root)
+                    DestinationsNavHost(navGraph = NavGraphs.root)
 //                    TabWithSwiping()
 //                    DefaultScaffold()
-                    MainEntryScreen()
+//                    MainEntryScreen()
 
                 }
             }
