@@ -43,6 +43,15 @@ class SoilParameterViewModel @Inject constructor(
     private val _searchQueryCode =  mutableStateOf("")
     val searchQueryCode: State<String> = _searchQueryCode
 
+    /*RADIO BUTTON*/
+    private val _radioButtonValue = MutableLiveData("")
+    val radioButtonValue:LiveData<String> = _radioButtonValue
+
+
+    fun changeRadioButtonValue(value:String){
+        _radioButtonValue.value = value
+    }
+
     init {
         onSearch("")
 //        onSearchCode("")

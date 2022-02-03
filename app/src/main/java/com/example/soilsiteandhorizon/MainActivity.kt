@@ -10,6 +10,7 @@ import com.example.soilsiteandhorizon.ui.NavGraphs
 import com.example.soilsiteandhorizon.ui.entri_site_horizon.MainEntryScreen
 import com.example.soilsiteandhorizon.ui.etc.LazyColumnItemTest
 import com.example.soilsiteandhorizon.ui.searchview.MunsellColorScreen
+import com.example.soilsiteandhorizon.ui.searchview.SettingBahasaScreen
 import com.example.soilsiteandhorizon.ui.soilScreen.DefaultScaffold
 import com.example.soilsiteandhorizon.ui.tabs.MainScreen
 import com.example.soilsiteandhorizon.ui.tabs.TabWithSwiping
@@ -30,10 +31,11 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
 //                    ModalDrawerExample()
-//                    DestinationsNavHost(navGraph = NavGraphs.root)
+                    DestinationsNavHost(navGraph = NavGraphs.root)
 //                    TabWithSwiping()
 //                    DefaultScaffold()
-                    MunsellColorScreen()
+//                    MunsellColorScreen()
+//                    SettingBahasaScreen()
 
                 }
             }

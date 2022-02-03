@@ -26,7 +26,7 @@ class AppModule {
             "soil_database"
         )
             .fallbackToDestructiveMigration()
-            .createFromAsset("database/SoilParameter2.db")
+            .createFromAsset("database/SoilParameter3.db")
             .build()
     }
 
